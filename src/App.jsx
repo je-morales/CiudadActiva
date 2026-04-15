@@ -788,7 +788,6 @@ export default function App() {
                 ? <div style={{ background: "#fff", borderRadius: 14, border: "0.5px solid #e5e5e5", padding: "2rem", textAlign: "center", color: "#9ca3af", fontSize: 14 }}>Aún no hay reportes. ¡Sé el primero en reportar!</div>
                 : <div style={S.grid2}>{recentReports.map(r => {
                     const type = PROBLEM_TYPES.find(t => t.id === r.type);
-                    const confirmed = currentUser && r.confirmations.includes(currentUser.id);
                     return (
                       <div key={r.id} style={S.rCard} onClick={() => { setSelectedReport(r); setView("detail"); }}>
                         <div style={S.rImg(type?.color || "#f3f4f6")}><div style={{ ...S.typeIconBox(type?.color), width: 44, height: 44, borderRadius: 12 }}>{type?.icon}</div></div>
