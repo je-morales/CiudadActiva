@@ -70,8 +70,7 @@ export default function App() {
   const [session, setSession] = useState(() => { try { return JSON.parse(localStorage.getItem("ca_session")); } catch { return null; } });
   const [loading, setLoading] = useState(true);
   const [view, setView] = useState("home");
-  const [homeTab] = useState("list");
-  const [navOpen] = useState(false);
+
   const [authMode, setAuthMode] = useState("login");
   const [authForm, setAuthForm] = useState({ name: "", email: "", password: "", role: "citizen", accessCode: "" });
   const [authError, setAuthError] = useState("");
