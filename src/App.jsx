@@ -70,8 +70,8 @@ export default function App() {
   const [session, setSession] = useState(() => { try { return JSON.parse(localStorage.getItem("ca_session")); } catch { return null; } });
   const [loading, setLoading] = useState(true);
   const [view, setView] = useState("home");
-  const [homeTab, setHomeTab] = useState("list");
-  const [navOpen, setNavOpen] = useState(false);
+  const [homeTab] = useState("list");
+  const [navOpen] = useState(false);
   const [authMode, setAuthMode] = useState("login");
   const [authForm, setAuthForm] = useState({ name: "", email: "", password: "", role: "citizen", accessCode: "" });
   const [authError, setAuthError] = useState("");
@@ -83,7 +83,7 @@ export default function App() {
   const [filterZone, setFilterZone] = useState("todos");
   const [selectedReport, setSelectedReport] = useState(null);
   const [gettingLocation, setGettingLocation] = useState(false);
-  const [mapCenter, setMapCenter] = useState(MAZATLAN);
+  const [mapCenter] = useState(MAZATLAN);
   const [saving, setSaving] = useState(false);
   const [adminTab, setAdminTab] = useState("reports");
   const [statusNote, setStatusNote] = useState("");
